@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CV</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+
+<style>
+    body {
+      background-color: #C0C0C0;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+      background-size: 100% 100%;
+    }
+
+
+    @property --gap{
+        syntax: '<length>';
+        inherits: true;
+        initial-value: 0;
+      }
+      @property --angle{
+        syntax: '<angle>';
+        inherits: true;
+        initial-value: 0deg;
+      }
+      
+      #my_image {
+        --border: 10px;
+        --gap: 12px;
+        --color: #FA6900;
+        
+        width: 300px;
+        aspect-ratio: 1;
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin: 20px;
+        cursor: pointer;
+        padding: calc(var(--border) + var(--gap));
+        
+        --angle: 90deg;
+        background:
+          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 85.35% 85.35%,
+          conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
+          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
+        background-size: var(--border) var(--border),auto;
+        background-repeat: no-repeat;
+        
+        -webkit-mask:
+          radial-gradient(farthest-side, 
+           #000  calc(99%  - calc(var(--border) + var(--gap))),
+           #0000 calc(100% - calc(var(--border) + var(--gap))) 
+                 calc(99%  - var(--border)), 
+           #000  calc(100% - var(--border)));
+                mask:
+          radial-gradient(farthest-side, 
+           #000  calc(99%  - calc(var(--border) + var(--gap))),
+           #0000 calc(100% - calc(var(--border) + var(--gap))) 
+                 calc(99%  - var(--border)), 
+           #000  calc(100% - var(--border)));
+        transition: --angle .4s,--gap .4s;
+      }
+      #my_image:hover {
+        --angle: 0deg;
+        --gap: 5px;
+      }
+      .vertical {
+        border-left: 0.5em solid black;
+        height: 1620px;
+        margin-left: 80px;
+    }
+
+    #progress_english{
+        padding-left:0; 
+        padding-right:0; 
+        width:20em; 
+    }
+
+    #inner_card_image{
+        height: 500px;
+    }
+
+    #card_image{
+        width: 234px;
+        height: 300px;
+        background-color: #C0C0C0;
+        border-color: #142d4c;
+        border-width: 5px;
+    }    
+
+    .card-body{
+        background-color: #142d4c;
+        padding-bottom:0;
+    }
+
+    .card{
+        margin-bottom: 15px;
+    }
+    
+    
+    #ielts_score{
+        width: 100px;
+        
+    }
+    #projects{
+        font-size:20px ;
+
+    }
+    #computer_skills{
+        width: 200px;
+    }
+    
+    .progress-bar{
+        background-color: #142d4c;
+    }
+      
+
+    .progress{
+        background-color: #95b3d7;
+    }
+
+    #ielts_table{
+        border: #C0C0C0;
+    }
+
+    .linkedin_svg{
+        height:50px;
+        
+    }
+  
+    .github_svg{
+        height: 30px;
+        align-items: center;
+        margin-top: 12px;
+        
+    
+    }
+
+    .github_svg:hover{
+        fill:#154b8d ;
+    
+    }
+
+
+
+  #icon_linkedin:hover{
+    
+    fill:#154b8d ;
+    transition: all ease 0.3s;
+}
+    .mail_svg{
+        height: 30px;
+        margin-top: 12px;
+    }
+
+    .mail_svg:hover{
+
+        fill: black;
+}
+   
+    
+</style>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg bg-dark" >
+        <div class="container-fluid">
+            <!-- LOGO -->
+            <a class="navbar-brand text-light" href="index.html">
+                <span class="text-warning">
+                    MY
+                </span class=>
+                    CV
+            </a>
+
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- About Me -->
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html#header_about_me">About Me</a>
+                    </li>
+                    <!-- Biography -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="biography.html">Biography</a>
+                    </li>
+                    <!-- Education -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="index.html#header_education">Education</a>
+                    </li>
+                    <!-- Experience -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="index.html#header_experience">Experience</a>
+                    </li>
+                    <!-- Computer Skills -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="index.html#header_computer_skills">Computer Skills</a>
+                    </li>
+                    <!-- Projects -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="index.html#header_projects">Projects</a>
+                    </li>
+                    <!-- Education and Certificates -->
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="index.html#header_educations_and_certificates">Educations and Sertificates</a>
+                    </li>
+
+
+
+
+                    <!-- Others -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Others
+                        </a>
+                        <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-light" href="index.html#english">English</a></li>
+                            <li><a  class="dropdown-item text-light" href="index.html#personal_characteristics">Personal Characteristics</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#the_life_approach">The Life Approach</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#hobbies">Hobbies</a></li>
+                        </ul>
+                    </li>
+                    <!-- Disable -->
+                    <!-- <li class="nav-item ">
+                        <a class="nav-link disabled text-light text-muted">Disabled</a>
+                    </li> -->
+                    </ul>
+                    <form class="d-flex" role="search">
+                    <!-- Search box -->
+                    <input class="form-control me-2"  style="width:18em;" type="search" placeholder="Type category you want to search" aria-label="Search">
+                    <!-- Search button -->
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                    </form>
+            </div>
+            
+        </div>
+    </nav>
+
+    <h1 class="container text-center display-1"><strong>MERT OLÇAMAN</strong></h1>
+    
+    
+    <div class="container text-dark">
+        
+        <!-- Informations First Part of The Page -->
+        <div class="row"> 
+            <!-- Informations Left Column -->
+            <div class="col-3">
+                <!-- IMAGE -->
+                <div class="row">
+                    <img id="my_image" src="https://media-exp1.licdn.com/dms/image/C4E03AQFiw8Pu_3c6hg/profile-displayphoto-shrink_200_200/0/1616185452261?e=1675296000&v=beta&t=EJLADPaw2TBXDXmKsKXrhC7RFHtETYKpUkYExuYbsbU" style="--color:#393e46">
+                </div>
+                
+
+
+                <!-- Contact -->
+                <div class="row" id="contact">
+                    <div class="col-2">
+
+                    </div>
+
+                    <div class="col-3   ">
+                        <a href="https://www.linkedin.com/in/mert-olçaman-624580159/"  title="LinkedIn">
+                            <svg class="linkedin_svg" id="icon_linkedin" viewBox="0 0 512 512" >
+                                <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+                            </svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
+                        </a>
+                        
+                        
+                    </div>
+
+                    <div class="col-3">
+                        <a href="https://github.com/htunknown">
+                            <svg class="github_svg" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 612 16"> 
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/> 
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="col-3">
+                        <a href="mailto: mertolcaman@gmail.com">
+                            <svg  class="mail_svg"  xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
+                                <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/>
+                                <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/>
+                                <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/>
+                                <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/>
+                                <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/>
+                            </svg>
+                            
+                        </a>
+                    </div>
+
+
+                    
+
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+                <div class="row">
+                    <p></p>
+                    <h3 id="english" class="text-start"><strong>ENGLISH</strong></h3>
+                    <p></p>
+
+
+                    <!-- TABLE-IELTS -->
+                    <table class="table" id="ielts_table" >
+                        <thead>
+                            <div class="text-center">
+                                <strong>IELTS Score (Date: 10/2022)</strong>
+                                
+                            </div>
+                            
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="ielts_score">Listening</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">7.0</div>
+                                    </div>
+                                </td>  
+                            </tr>
+
+                            <tr>
+                                <td id="ielts_score">Reading</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">6.5</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="ielts_score">Writing</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">6.0</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="ielts_score">Speaking</td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> 6.0</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr><td></td></tr>
+                            <tr>
+                                <td id="ielts_score"><strong>Overall</strong></td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"> 6.5</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- Personal Characteristics List -->
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="personal_characteristics"><strong>Personal Characteristics</strong></h5>  </li>
+                        <div class="container">
+                            <li class="list">Patient</li>
+                            <li class="list">Determined</li>
+                            <li class="list">Having Responsibility</li>
+                            <li class="list">Like to learn by self</li>
+                        
+                        </div>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- The Life Approach -->
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="the_life_approach"><strong>The Life Approach</strong></h5>  </li>
+                        <div class="container">
+                            <li class="list">To continue to do things at the point where everyone gives up.</li>
+                            <p></p>
+                            <li class="list">Dividing the success into 2 part as first is our achievements that we have already reached and another is the things that we have learned from our unsuccessful attempts.</li>
+                            
+                        
+                        </div>
+                        
+                        
+                    </ul>
+
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- Hobbies -->
+                <div class="row">
+                    <ul class="list-group">
+                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="hobbies"><strong>Hobbies</strong></h5>  </li>
+                        <div class="container">
+                            <li class="list">Playing Insrument</li>
+                        </div> 
+                    </ul>
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+
+
+
+
+            </div>
+            <!-- Empty -->
+            <!-- <div class="col">
+            </div> -->
+            <!-- Line -->
+            <div  class=" vertical col-1 ">
+            </div>
+
+            <!-- Informations Right Column-->
+            <div class="col ">
+                <div class="container" style="height:3em;">
+                </div>
+                
+
+                <!-- About me header -->
+                <div class="row">
+                    <div>
+                        <h1 id="header_about_me"><strong>ABOUT ME</strong></h1>
+                    </div>
+                </div>
+
+                <!-- ABOUT ME -->
+                <div class="row">
+                    <div>
+                        <p>
+                            
+                            <h5 class="about_me" style="font-weight: normal;">I was born on July 15,1996 in Manisa, Turkey. After completing high school education, I moved to Bursa where I studied in mechanical engineering.
+                                                                                While I was studying, 2 honour certificates and 1 higher honour certificates were given to me by my home university thanks to my academic performance.
+                                                                                <br>
+                                                                                <br>
+                                                                                Up to now, I think I can learn anything that I am interested in by myself. Moreover, I really love to improve my skills constantly and
+                                                                                like to deal with tasks on computer by using various tools. 
+                                                                                
+                                                                                
+                                                                                
+                                                                                
+
+                                                                                <br>
+                                                                                <br>
+                                                                                In my leisure time, I am keen on playing guitar. Also, I took part in some events and competitions, when I was at high school.
+                                                                                
+                                                                                
+                                                                                </h5>
+                          
+                        </p>
+
+                        <h4><a style="text-decoration: none; color: #142d4c;" href="biography.html">More About Me</a></h4>
+                    </div>
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- Education header -->
+                <div class="row">
+                    <div>
+                        <h3 id="header_education"><strong>EDUCATION</strong></h3>
+                    </div>
+                </div>
+
+                <!-- Table-Education -->
+                <div class="row ">
+                    
+                    <table class="table table-hover container border-dark" style="width:50em;">
+                        
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody class="container text-center">
+                            <!-- Erasmus -->
+                            <tr>
+                                <th style=text-align:left;>Bachelor</th>
+                                <td>
+                                    <p style="margin:0 ;">Silesian University of Technology-Mechanical Engineering</p>
+                                    <p style="margin:0 ;">(Erasmus Student Exchange Programme)</p>
+                                    <p style="margin:0 ;"> (Gliwice-POLAND | 09/2019 - 02/2020)</p>
+                                </td>
+                            </tr>
+                            <!-- Farabi -->
+                            <tr>
+                                <th style=text-align:left>Bachelor</th>
+                                <td>
+                                    <p style="margin:0 ;">Yıldız Technical University-Mechanical Engineering</p>
+                                    <p style="margin:0 ;">(Farabi Student Exchange Programme)</p>
+                                    <p style="margin:0 ;">İstanbul | 09/2018 - 06/2019)</p>
+                                    <p style="margin:0 ;"> <strong> GPA: 3.27</strong>  </p>
+                                </td>
+                            </tr>
+                            <!-- Uludag -->
+                            <tr>
+                                <th style=text-align:left>Bachelor</th>
+                                <td>
+                                    <p style="margin:0 ;">Bursa Uludag University</p>
+                                    <p style="margin:0 ;">Bursa | 09/2015 - 01/2022</p>
+                                    <p style="margin:0 ;"> <strong>GPA:3.36</strong>   </p>
+                                </td>
+                            </tr>
+                            <!-- Highschool -->
+                            <tr>
+                                <th style=text-align:left>Highschool</th>
+                                <td>
+                                    <p style="margin:0 ;">Hasan Türek Anatolian Highschool</p>
+                                    <p style="margin:0 ;">Manisa | 09/2011 - 06/2015</p>
+                                    <p style="margin:0 ;"> <strong>GRADE: 79.29</strong> </p>
+                                </td>
+                            </tr>
+                            <!-- Academic Achievements -->
+                            <tr>
+                                <th style=text-align:left>Academic Achievements</th>
+                                <td>
+                                    <ul style="margin-bottom:0; margin-left: 0;" class="text-start">
+                                        <li>2017/2018 Spring Term; being in the first 10% <strong>(Higher Honor Certificate)</strong></li>
+                                        <li>2017/2018 Fall Term; being in the first 10% <strong>(Honor Certificate)</strong></li>
+                                        <li>2016/2017 Spring Term; being in the first 10% <strong>(Honor Certificate)</strong></li>
+                                    </ul>
+                                </td>
+                            </tr>    
+                        </tbody>
+                        
+                    </table>
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="row">
+                    <h3 id="header_experience" ><strong>EXPERIENCE</strong></h3>
+                    <p style="margin:0 ; font-size: larger;"> <strong>06/2021 - 01/2022</strong>  | Renkler Makine (MANISA) - Part Time Manufacturing Engineer</p>
+                    <p style="margin:0 ; font-size: larger;"><strong>08/2018 - 09/2018</strong>  | Accell Bicycle (MANISA) - Summer Internship</p>
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+                <!-- TABLE-Computer Skills -->
+                <table class="table table-hover" id="ielts_table" >
+                        <thead>
+                            <div class="">
+                                <h3 id="header_computer_skills" ><strong>COMPUTER SKILLS</strong></h3>
+                            </div>
+                            
+                        </thead>
+                        <tbody>
+                            <!-- Python -->
+                            <tr>
+                                <td id="computer_skills"> <strong>Python</strong> </td>
+                                <td >
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>  
+                            </tr>
+                            <!-- C++ -->
+                            <tr>
+                                <td id="computer_skills">  <strong>C++</strong>  </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- MATLAB -->
+                            <tr>
+                                <td id="computer_skills">  <strong>MATLAB</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Excel -->
+                            <tr>
+                                <td id="computer_skills">  <strong>Excel</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- SQL -->
+                            <tr>
+                                <td id="computer_skills"> <strong>SQL</strong>  </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Arduino -->
+                            <tr>
+                                <td id="computer_skills">  <strong>Arduino</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- HTML -->
+                            <tr>
+                                <td id="computer_skills">  <strong>HTML</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Ansys Fluent -->
+                            <tr>
+                                <td id="computer_skills">  <strong>Ansys Fluent</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- CATIA -->
+                            <tr>
+                                <td id="computer_skills"> <strong>CATIA</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- SolidWorks -->
+                            <tr>
+                                <td id="computer_skills"> <strong>SolidWorks</strong>  </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- PLC -->
+                            <tr>
+                                <td id="computer_skills">  <strong>PLC</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- AutoCAD -->
+                            <tr>
+                                <td id="computer_skills">  <strong>AutoCAD</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Siemens NX -->
+                            <tr>
+                                <td id="computer_skills">  <strong>Siemens NX</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- 3D printer -->
+                            <tr>
+                                <td id="computer_skills">  <strong>3D Printer</strong> </td>
+                                <td>
+                                    <div class="progress">
+                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                </table>
+
+                <div class="container" style="height:3em;">
+                </div>
+
+            </div>                
+        </div>
+        
+        <!-- Informations Second Part of The Page -->
+        <div class="row">
+            <div>
+                <!-- PROJECTS -->
+                <div class="row" id="projects">
+                    <ul class="list-group">
+                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h3 id="header_projects" ><strong>PROJECTS</strong></h3>  </li>
+                        <div class="container">
+                            <li class="list">Website designed by Bootstrap  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://github.com/htunknown/my/tree/main"><strong> (Source Code , </strong> </a>  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="http://a-9v15.onrender.com/"> <strong>Website)</strong> </a></li>
+                            <p></p>
+                            <li class="list">Working on the controlling of the roll, pitch and yaw axes of the Quadcopter, which was printed via 3D printer by me and which was designed from the Solidworks by me, in real time by using Arduino and Matlab Simulink. <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://www.youtube.com/watch?v=qrYwcl2z4zA&ab_channel=MERTOLCAMAN"> <strong>(Final Project Presentation Video)</strong> </a></li>
+                            <p></p>
+                            <li class="list">Modelling a mechanical press model and created graphics about kinetic analysis after determining the links and supports by Siemens NX.</li>
+                            <p></p>
+                            <li class="list">We have coded PLC for automated car parking system on Panasonic software with project members from Yıldız Technical University.</li>
+                            <p></p>
+                            <li class="list">Modelling of “Mass-Spring-Damper” in Simulink, Simscape, Simmechanic on Matlab and I have implemented the PID controlling of velocity and position.</li>
+                            <p></p>
+                            <li class="list">Working on Arduino and implementation of different types of projects during pandemic:
+                                <ul class="list-group ">
+                                     <li style="list-style:none ;" class="list"> &#160;  -The controlling of the electrical vehicle from mobile application by HC06 Bluetooth module</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  -Parking sensor by HC-SR04 and printing the distance to LCD screen</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  -Remote position changing of the servo motor by using NRFL2401 and joystick</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  -Line follower electrical vehicle by using infrared sensor</li>
+                                </ul>
+                            </li>
+                            <p></p>
+                            <li class="list">Designing different types of 3D models by Solidworks and I have gotten 3D printed models via Ender 3v2.</li>
+
+                        
+                        </div>
+                        
+                        
+                    </ul>
+
+                </div>
+
+                <div class="container" style="height:3em;">
+                </div>
+                
+                <!-- EDUCATIONS AND CERTIFICATES -->
+                <div class="">
+                    <h3 id="header_educations_and_certificates"><strong>EDUCATIONS AND CERTIFICATES</strong></h3>
+                </div>
+
+                <!-- CARDS-CERTIFICATES -->
+                <div class="container">
+                    <div class="row">
+                        <!-- 1.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img  id="inner_card_image" src="https://i.ibb.co/TwrsJpk/kaggle.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong> Kaggle</strong></h5>
+                                    <p class="card-text">Data Visualization</p>
+                                    <p class="card-text">11/2022</p>
+                                </div>
+                            </div>  
+                        </div>
+                        <!-- 2.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://i.ibb.co/XFSvsBF/Global-AI-Hub-Data-Visualization.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                    <p class="card-text">Data Visualization</p>
+                                    <p class="card-text">3/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 3.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://i.ibb.co/Czz3q2x/Mert-OLCAMAN-Hands-on-Data-Visualization-with-Python-Hands-on-Data-Visualization-with-Python-Global.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                    <p class="card-text">Hands-on Data Visualization with Python</p>
+                                    <p class="card-text">1/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://i.ibb.co/vwZX44d/Mert-OLCAMAN-Veri-Analizi-Data-Analysis-Global-AI-Hub.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                    <p class="card-text">Data Analysis</p>
+                                    <p class="card-text">2/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 5.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image"  src="https://iili.io/HBNM5YB.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                    <p class="card-text">Data Literacy</p>
+                                    <p class="card-text">12/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 6.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBNMR2V.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                    <p class="card-text">Introduction to Data Science and AI</p>
+                                    <p class="card-text">12/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 7.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBNM7kP.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                    <p class="card-text">Statistics for Data Science</p>
+                                    <p class="card-text">11/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 8.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBNkfP1.png" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>TEI Akademi </strong></h5>
+                                    <p class="card-text">Aviation Engines Schools</p>
+                                    <p class="card-text">6/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 9.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOuc4n.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Elginkan Foundation </strong></h5>
+                                    <p class="card-text">Advanced Excel</p>
+                                    <p class="card-text">2/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 10.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOu02s.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                    <p class="card-text">AutoCAD</p>
+                                    <p class="card-text">2/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 11.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOuYBt.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                    <p class="card-text">Python</p>
+                                    <p class="card-text">1/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 12.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOuaEX.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                    <p class="card-text">SolidWorks</p>
+                                    <p class="card-text">2/2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 13.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOuWj2.jpg" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                    <p class="card-text">SQL</p>
+                                    <p class="card-text">1/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 14.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOU1cP.png" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                    <p class="card-text">Honour Certificate</p>
+                                    <p class="card-text">2016-2017 Spring</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 15.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOU0KB.png" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                    <p class="card-text">Honour Certificate</p>
+                                    <p class="card-text">2017-2018 Fall</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 16.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img id="inner_card_image" src="https://iili.io/HBOUES1.png" alt="">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                    <p class="card-text">Higher Honour Certificate</p>
+                                    <p class="card-text">2017-2018 Spring</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+ 
+
+</body>
+</html>
+
+

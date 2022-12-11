@@ -74,7 +74,7 @@
       }
       .vertical {
         border-left: 0.5em solid black;
-        height: 1620px;
+        height: 1850px;
         margin-left: 80px;
     }
 
@@ -166,13 +166,53 @@
         fill: black;
 }
    
+
+#card_image:hover {
+    transform: scale(2);
+    position: relative;
+    z-index:3 ;
+    top:-100px;
+  }
+
+.navbar{
+    position: fixed;
+    z-index: 2; 
+}
+
+.accordion-button:not(.collapsed) {
+    
+    color:inherit;
+    background:#142d4c;
+    color: white;
+}
+
+.accordion-button:not(.collapsed)::after{
+    filter: brightness(0%) invert(70%);
+}
+.accordion-button:focus{
+    box-shadow: inherit;   
+
+}
+
+.accordion-button{
+    background-color: #C0C0C0;
+    border-color: #000;
+}
+
+.accordion-item{
+    background-color: #C0C0C0;
+    border-color: #000;
+}
+
+
     
 </style>
 
 </head>
 <body>
+    
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg bg-dark" >
+    <nav class="navbar container-fluid navbar-expand-lg bg-dark" >
         <div class="container-fluid">
             <!-- LOGO -->
             <a class="navbar-brand text-light" href="index.html">
@@ -182,7 +222,7 @@
                     CV
             </a>
 
-            
+            <!-- Navbar Butons -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
             </button>
@@ -247,7 +287,10 @@
             
         </div>
     </nav>
-
+    
+    <div>
+        <br><br><br>
+    </div>
     <h1 class="container text-center display-1"><strong>MERT OLÇAMAN</strong></h1>
     
     
@@ -270,6 +313,7 @@
 
                     </div>
 
+                    <!-- Linkedin -->
                     <div class="col-3   ">
                         <a href="https://www.linkedin.com/in/mert-olçaman-624580159/"  title="LinkedIn">
                             <svg class="linkedin_svg" id="icon_linkedin" viewBox="0 0 512 512" >
@@ -279,7 +323,7 @@
                         
                         
                     </div>
-
+                    <!-- Github -->
                     <div class="col-3">
                         <a href="https://github.com/htunknown">
                             <svg class="github_svg" xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 612 16"> 
@@ -287,7 +331,7 @@
                             </svg>
                         </a>
                     </div>
-
+                    <!-- Mail -->
                     <div class="col-3">
                         <a href="mailto: mertolcaman@gmail.com">
                             <svg  class="mail_svg"  xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
@@ -324,8 +368,10 @@
                             </div>
                             
                         </thead>
+                        <!-- Table IELTS Content -->
                         <tbody>
                             <tr>
+                                <!-- Listening -->
                                 <td id="ielts_score">Listening</td>
                                 <td>
                                     <div class="progress">
@@ -335,6 +381,7 @@
                             </tr>
 
                             <tr>
+                                <!-- Reading -->
                                 <td id="ielts_score">Reading</td>
                                 <td>
                                     <div class="progress">
@@ -343,6 +390,7 @@
                                 </td>
                             </tr>
                             <tr>
+                                <!-- Writing -->
                                 <td id="ielts_score">Writing</td>
                                 <td>
                                     <div class="progress">
@@ -351,6 +399,7 @@
                                 </td>
                             </tr>
                             <tr>
+                                <!-- Speaking -->
                                 <td id="ielts_score">Speaking</td>
                                 <td>
                                     <div class="progress">
@@ -360,6 +409,7 @@
                             </tr>
                             <tr><td></td></tr>
                             <tr>
+                                <!-- Overall -->
                                 <td id="ielts_score"><strong>Overall</strong></td>
                                 <td>
                                     <div class="progress">
@@ -562,21 +612,62 @@
                 <!-- EXPERIENCE -->
                 <div class="row">
                     <h3 id="header_experience" ><strong>EXPERIENCE</strong></h3>
-                    <p style="margin:0 ; font-size: larger;"> <strong>06/2021 - 01/2022</strong>  | Renkler Makine (MANISA) - Part Time Manufacturing Engineer</p>
-                    <p style="margin:0 ; font-size: larger;"><strong>08/2018 - 09/2018</strong>  | Accell Bicycle (MANISA) - Summer Internship</p>
-                </div>
+                    <div  class="accordion accordion-flush" id="accordionFlushExample" >
+                        <div class="accordion-item" >
+                          <h2 class="accordion-header" id="flush-headingOne" >
+                            <button   class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p style="margin:0 ; font-size: larger;"> <strong>06/2021 - 01/2022</strong>  | Renkler Makine (MANISA) - Part Time Manufacturing Engineer</p>    
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <ul class="list-group">
+                                    <li style="list-style:none;" class="list">&#160; -participating in 5S controls in different unit each time</li>
+                                    <li style="list-style:none;" class="list">&#160; -helping for tagging tools as well as arrangements</li>
+                                    <li style="list-style:none;" class="list">&#160; -helping about autocad drawings of some parts which is used in the production field and drawing the sketch of an exact production area</li>
+                                    <li style="list-style:none;" class="list">&#160; -taking note by observing the spesific production areas and operators in order to check whether there is a loss of efficiency and noting action list and reporting the result of the observation to the production manager daily</li>
+                                    <li style="list-style:none;" class="list">&#160; -preparing SMED form and spaghetti diagram, comparing of the difference between takt time and cycle time by using bar chart, learning skill matrix</li>
+                                    <li style="list-style:none;" class="list">&#160; -figuring out how OEE can be used in a real workplace and seeing the status of the operators and stops of the machines</li>
+                                    <li style="list-style:none;" class="list">&#160; -creating different figures (bar, line, pie) (based on operator, machine, shift...) by importing the data from Power BI to excel</li>
+                                </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item" >
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p style="margin:0 ; font-size: larger;"><strong>08/2018 - 09/2018</strong>  | Accell Bicycle (MANISA) - Summer Internship</p>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">I completed my internship in the unit of <strong>occupational health and safety</strong>. <br> During my work; <br>
+                                <li style="list-style:none;" class="list">&#160; <strong>-</strong> I had opportunity to see almost all the units in the factory. </li>
+                                <li style="list-style:none;" class="list">&#160; <strong>-</strong> I mainly worked on welding area in order to find the situations which could create hazardous situations by taking note.</li>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                
 
                 <div class="container" style="height:3em;">
                 </div>
 
                 <!-- TABLE-Computer Skills -->
-                <table class="table table-hover" id="ielts_table" >
+                <table class="table table-hover" id="ielts_table" > 
                         <thead>
                             <div class="">
                                 <h3 id="header_computer_skills" ><strong>COMPUTER SKILLS</strong></h3>
                             </div>
                             
                         </thead>
+                        <!-- Table Computer Skills Content -->
                         <tbody>
                             <!-- Python -->
                             <tr>
@@ -725,20 +816,29 @@
                         <div class="container">
                             <li class="list">Website designed by Bootstrap  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://github.com/htunknown/my/tree/main"><strong> (Source Code , </strong> </a>  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="http://a-9v15.onrender.com/"> <strong>Website)</strong> </a></li>
                             <p></p>
-                            <li class="list">Working on the controlling of the roll, pitch and yaw axes of the Quadcopter, which was printed via 3D printer by me and which was designed from the Solidworks by me, in real time by using Arduino and Matlab Simulink. <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://www.youtube.com/watch?v=qrYwcl2z4zA&ab_channel=MERTOLCAMAN"> <strong>(Final Project Presentation Video)</strong> </a></li>
+                            <li class="list"><strong style="color: #142d4c; text-decoration: none; font-size: 15px;">Final Project:</strong> Working on the controlling of the roll, pitch and yaw axes of the Quadcopter, which was printed via 3D printer by me and which was designed from the Solidworks by me, in real time by using Arduino and Matlab Simulink. <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://www.youtube.com/watch?v=qrYwcl2z4zA&ab_channel=MERTOLCAMAN"> <strong>(Presentation Video ,</strong></a> <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/drive/folders/1ubNJxfprhh-IOYGDIDfkfJXHYCK9tLBI?usp=sharing"> <strong>Project Documents)</strong></a></li>
                             <p></p>
-                            <li class="list">Modelling a mechanical press model and created graphics about kinetic analysis after determining the links and supports by Siemens NX.</li>
+                            <li class="list">Modelling a mechanical press model and creating graphics related to kinetic analysis after determining the links and supports by Siemens NX with other group members. <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/drive/folders/1ZVJmcEB0Ngas27be1SQebQlpzDohGNNg?usp=sharing"> <strong> (Project Document) </strong></a></li>
                             <p></p>
-                            <li class="list">We have coded PLC for automated car parking system on Panasonic software with project members from Yıldız Technical University.</li>
+                            <li class="list"> Gearbox design and modelling on Autodesk Inventor  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/drive/folders/1nCQVcdlUsGRNuAacKZVfTecZhJnZ_3JV?usp=sharing"> <strong>(Project Documents)</strong></a></li>
+                            <p></p>
+                            <li class="list">We coded PLC for automated car parking system on Panasonic software with project members from Yıldız Technical University.  <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/drive/folders/18jh6IuZg-EdcsDuGrs0XmsPySUozLuXM?usp=sharing"> <strong> (Project Documents) </strong>  </a> </li>
                             <p></p>
                             <li class="list">Modelling of “Mass-Spring-Damper” in Simulink, Simscape, Simmechanic on Matlab and I have implemented the PID controlling of velocity and position.</li>
                             <p></p>
+                            <li class="list">2 projects related to "Computer Aided Heat Technique Calculations" by Ansys fluent:
+                                <ul class="list-group">
+                                    <li style="list-style:none;" class="list">&#160;  <strong>-</strong>Examining of temperature changes in the wall of barrage by modelling 2D <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/file/d/1qcnTX_xGA3hK5DFmNNWtU7w-pjQVhQOk/view?usp=sharing"> <strong>(Project Document)</strong></a></li>
+                                    <li style="list-style:none;" class="list">&#160;  <strong>-</strong>Examining of flow through "2-D Curved Backward-Facing Step" <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://drive.google.com/file/d/13Sh2qBHZ53lA1QYEKmGLT8h4hKpsyOvg/view?usp=sharing"> <strong>(Project Document)</strong></a></li>
+                                </ul>
+                            </li>
+                            <p></p>
                             <li class="list">Working on Arduino and implementation of different types of projects during pandemic:
                                 <ul class="list-group ">
-                                     <li style="list-style:none ;" class="list"> &#160;  -The controlling of the electrical vehicle from mobile application by HC06 Bluetooth module</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  -Parking sensor by HC-SR04 and printing the distance to LCD screen</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  -Remote position changing of the servo motor by using NRFL2401 and joystick</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  -Line follower electrical vehicle by using infrared sensor</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>The controlling of the electrical vehicle from mobile application by HC06 Bluetooth module</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Parking sensor by HC-SR04 and printing the distance to LCD screen</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Remote position changing of the servo motor by using NRFL2401 and joystick</li>
+                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Line follower electrical vehicle by using infrared sensor</li>
                                 </ul>
                             </li>
                             <p></p>
@@ -763,6 +863,17 @@
                 <!-- CARDS-CERTIFICATES -->
                 <div class="container">
                     <div class="row">
+                        <!--    -1.certificate -->
+                        <div class="col">
+                            <div class="card" id="card_image" >
+                                <img  id="inner_card_image" src="https://iili.io/HCLMQ0N.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                    <h5 class="card-title"><strong> Deep Learning AI</strong></h5>
+                                    <p class="card-text">AI For Everyone</p>
+                                    <p class="card-text">12/2022</p>
+                                </div>
+                            </div>  
+                        </div>
                         <!-- 1.certificate -->
                         <div class="col">
                             <div class="card" id="card_image" >
@@ -942,13 +1053,24 @@
                     </div>
             </div>
         </div>
-    </div>
+    </div>  
 
 
 
  
 
 </body>
+
+
+
+
+
+<button class="accordion">asdasd</button>
+<div class="panel">
+    qweqwe
+</div>
+
+
 </html>
 
 

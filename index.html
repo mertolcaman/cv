@@ -1,240 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY CV</title>
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 
-<style>
-
-    body {
-      background-color: #C0C0C0;
-      background-repeat: no-repeat;
-      background-attachment: fixed; 
-      background-size: 100% 100%;
-    }
-
-
-    @property --gap{
-        syntax: '<length>';
-        inherits: true;
-        initial-value: 0;
-      }
-      @property --angle{
-        syntax: '<angle>';
-        inherits: true;
-        initial-value: 0deg;
-      }
-      
-      #my_image {
-        --border: 10px;
-        --gap: 12px;
-        --color: #FA6900;
-        
-        width: 350px;
-        aspect-ratio: 1;
-        box-sizing: border-box;
-        border-radius: 50%;
-        margin: 40px;
-        cursor: pointer;
-        padding: calc(var(--border) + var(--gap));
-        
-        --angle: 90deg;
-        background:
-          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 85.35% 85.35%,
-          conic-gradient(from calc(180deg - var(--angle)/2),#0000 var(--angle),var(--color) 0),
-          radial-gradient(farthest-side,var(--color) 97%,#0000 101%) 14.65% 85.35%;
-        background-size: var(--border) var(--border),auto;
-        background-repeat: no-repeat;
-        
-        -webkit-mask:
-          radial-gradient(farthest-side, 
-           #000  calc(99%  - calc(var(--border) + var(--gap))),
-           #0000 calc(100% - calc(var(--border) + var(--gap))) 
-                 calc(99%  - var(--border)), 
-           #000  calc(100% - var(--border)));
-                mask:
-          radial-gradient(farthest-side, 
-           #000  calc(99%  - calc(var(--border) + var(--gap))),
-           #0000 calc(100% - calc(var(--border) + var(--gap))) 
-                 calc(99%  - var(--border)), 
-           #000  calc(100% - var(--border)));
-        transition: --angle .4s,--gap .4s;
-      }
-      #my_image:hover {
-        --angle: 0deg;
-        --gap: 5px;
-      }
-      .vertical {
-        border-left: 0.5em solid black;
-        height: 2200px;
-        margin-left: 10px;
-    }
-
-    #progress_english{
-        padding-left:0; 
-        padding-right:0; 
-        width:20em; 
-    }
-
-    #inner_card_image{
-        height: 500px;
-    }
-
-    #card_image{
-        width: 234px;
-        height: 300px;
-        background-color: #C0C0C0;
-        border-color: #142d4c;
-        border-width: 5px;
-    }    
-
-    .card-body{
-        background-color: #142d4c;
-        padding-bottom:0;
-    }
-
-    .card{
-        margin-bottom: 15px;
-    }
-    
-    #ielts_score{
-        width: 100px;
-    }
-
-    #projects{
-        font-size:20px ;
-    }
-
-    #computer_skills{
-        width: 200px;
-    }
-    
-    .progress-bar{
-        background-color: #142d4c;
-    }
-      
-    .progress{
-        background-color: #95b3d7;
-    }
-
-    #ielts_table{
-        border: #C0C0C0;
-    }
-
-    #contact{
-        padding-left:0px;
-    }
-
-    .linkedin_svg{
-        height:50px;
-    }
-  
-    .github_icon{
-        height: 40px;
-        align-items: center;
-        margin-top: 8px;
-    }
-
-    .github_icon:hover{
-        filter: invert(100%);   
-    }
-
-    .kaggle_icon{
-        width:35px;
-        margin-top:6px;
-    }
-
-    .kaggle_icon:hover{
-        filter: invert(57%) sepia(96%) saturate(1056%) hue-rotate(162deg) brightness(101%) contrast(77%);
-    }
-
-  #icon_linkedin:hover{
-    filter: invert(100%) sepia(50%);
-}
-    .mail_svg{
-        height: 30px;
-        margin-top: 10px;
-    }
-
-    .mail_svg:hover{
-        filter: invert(25%);
-}
-   .wp_icon{
-        width: 40px;
-        margin-top: 3px;
-   }
-
-   .wp_icon:hover{
-    filter: invert(91%) sepia(79%) saturate(107%) hue-rotate(208deg) brightness(115%) contrast(101%);
-   }
+    <style>
+        body {
+            background-color: #C0C0C0;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
 
 
-#card_image:hover {
-    transform: scale(2);
-    position: relative;
-    z-index:3 ;
-    top:-100px;
-  }
+        @property --gap {
+            syntax: '<length>';
+            inherits: true;
+            initial-value: 0;
+        }
 
-.navbar{
-    position: fixed;
-    z-index: 2; 
-}
+        @property --angle {
+            syntax: '<angle>';
+            inherits: true;
+            initial-value: 0deg;
+        }
 
-.accordion-button:not(.collapsed) {
-    
-    color:inherit;
-    background:#142d4c;
-    color: white;
-}
+        #my_image {
+            --border: 10px;
+            --gap: 12px;
+            --color: #FA6900;
 
-.accordion-button:not(.collapsed)::after{
-    filter: brightness(0%) invert(70%);
-}
-.accordion-button:focus{
-    box-shadow: inherit;   
+            width: 350px;
+            aspect-ratio: 1;
+            box-sizing: border-box;
+            border-radius: 50%;
+            margin: 40px;
+            cursor: pointer;
+            padding: calc(var(--border) + var(--gap));
 
-}
+            --angle: 90deg;
+            background:
+                radial-gradient(farthest-side, var(--color) 97%, #0000 101%) 85.35% 85.35%,
+                conic-gradient(from calc(180deg - var(--angle)/2), #0000 var(--angle), var(--color) 0),
+                radial-gradient(farthest-side, var(--color) 97%, #0000 101%) 14.65% 85.35%;
+            background-size: var(--border) var(--border), auto;
+            background-repeat: no-repeat;
 
-.accordion-button{
-    background-color: #C0C0C0;
-    border-color: #000;
-}
+            -webkit-mask:
+                radial-gradient(farthest-side,
+                    #000 calc(99% - calc(var(--border) + var(--gap))),
+                    #0000 calc(100% - calc(var(--border) + var(--gap))) calc(99% - var(--border)),
+                    #000 calc(100% - var(--border)));
+            mask:
+                radial-gradient(farthest-side,
+                    #000 calc(99% - calc(var(--border) + var(--gap))),
+                    #0000 calc(100% - calc(var(--border) + var(--gap))) calc(99% - var(--border)),
+                    #000 calc(100% - var(--border)));
+            transition: --angle .4s, --gap .4s;
+        }
 
-.accordion-item{
-    background-color: #C0C0C0;
-    border-color: #000;
-}
-</style>
+        #my_image:hover {
+            --angle: 0deg;
+            --gap: 5px;
+        }
+
+        .vertical {
+            border-left: 0.5em solid black;
+            height: 2200px;
+            margin-left: 10px;
+        }
+
+        #progress_english {
+            padding-left: 0;
+            padding-right: 0;
+            width: 20em;
+        }
+
+        #inner_card_image {
+            height: 500px;
+        }
+
+        #card_image {
+            width: 234px;
+            height: 300px;
+            background-color: #C0C0C0;
+            border-color: #142d4c;
+            border-width: 5px;
+        }
+
+        .card-body {
+            background-color: #142d4c;
+            padding-bottom: 0;
+        }
+
+        .card {
+            margin-bottom: 15px;
+        }
+
+        #ielts_score {
+            width: 100px;
+        }
+
+        #projects {
+            font-size: 20px;
+        }
+
+        #computer_skills {
+            width: 200px;
+        }
+
+        .progress-bar {
+            background-color: #142d4c;
+        }
+
+        .progress {
+            background-color: #95b3d7;
+        }
+
+        #ielts_table {
+            border: #C0C0C0;
+        }
+
+        #contact {
+            padding-left: 0px;
+        }
+
+        .linkedin_svg {
+            height: 50px;
+        }
+
+        .github_icon {
+            height: 40px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .github_icon:hover {
+            filter: invert(100%);
+        }
+
+        .kaggle_icon {
+            width: 35px;
+            margin-top: 6px;
+        }
+
+        .kaggle_icon:hover {
+            filter: invert(57%) sepia(96%) saturate(1056%) hue-rotate(162deg) brightness(101%) contrast(77%);
+        }
+
+        #icon_linkedin:hover {
+            filter: invert(100%) sepia(50%);
+        }
+
+        .mail_svg {
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .mail_svg:hover {
+            filter: invert(25%);
+        }
+
+        .wp_icon {
+            width: 40px;
+            margin-top: 3px;
+        }
+
+        .wp_icon:hover {
+            filter: invert(91%) sepia(79%) saturate(107%) hue-rotate(208deg) brightness(115%) contrast(101%);
+        }
+
+
+        #card_image:hover {
+            transform: scale(2);
+            position: relative;
+            z-index: 3;
+            top: -100px;
+        }
+
+        .navbar {
+            position: fixed;
+            z-index: 2;
+        }
+
+        .accordion-button:not(.collapsed) {
+
+            color: inherit;
+            background: #142d4c;
+            color: white;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            filter: brightness(0%) invert(70%);
+        }
+
+        .accordion-button:focus {
+            box-shadow: inherit;
+
+        }
+
+        .accordion-button {
+            background-color: #C0C0C0;
+            border-color: #000;
+        }
+
+        .accordion-item {
+            background-color: #C0C0C0;
+            border-color: #000;
+        }
+    </style>
 </head>
+
 <body>
-    
+
     <!-- HEADER -->
-    <nav class="navbar container-fluid navbar-expand-lg bg-dark" >
+    <nav class="navbar container-fluid navbar-expand-lg bg-dark">
         <div class="container-fluid">
             <!-- LOGO -->
             <a class="navbar-brand text-light" href="index.html">
                 <span class="text-warning">
                     MY
                 </span class=>
-                    CV
+                CV
             </a>
 
             <!-- Navbar Butons -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <!-- About Me -->
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="index.html#header_about_me">About Me</a>
+                        <a class="nav-link active text-light" aria-current="page"
+                            href="index.html#header_about_me">About Me</a>
                     </li>
                     <!-- Biography -->
                     <li class="nav-item ">
@@ -258,60 +269,68 @@
                     </li>
                     <!-- Education and Certificates -->
                     <li class="nav-item ">
-                        <a class="nav-link text-light" href="index.html#header_educations_and_certificates">Educations and Sertificates</a>
+                        <a class="nav-link text-light" href="index.html#header_educations_and_certificates">Educations
+                            and Sertificates</a>
                     </li>
 
 
                     <!-- Others -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Others
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Others
                         </a>
                         <ul class="dropdown-menu bg-dark">
                             <li><a class="dropdown-item text-light" href="index.html#english">English</a></li>
-                            <li><a  class="dropdown-item text-light" href="index.html#personal_characteristics">Personal Characteristics</a></li>
-                            <li><a class="dropdown-item text-light" href="index.html#the_life_approach">The Life Approach</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#personal_characteristics">Personal
+                                    Characteristics</a></li>
+                            <li><a class="dropdown-item text-light" href="index.html#the_life_approach">The Life
+                                    Approach</a></li>
                             <li><a class="dropdown-item text-light" href="index.html#hobbies">Hobbies</a></li>
-                            <li><a class="dropdown-item text-light" href="index.html#project_euler">Project Euler</a></li>
-                            
+                            <li><a class="dropdown-item text-light" href="index.html#project_euler">Project Euler</a>
+                            </li>
+
                         </ul>
                     </li>
                     <!-- Disable -->
                     <!-- <li class="nav-item ">
                         <a class="nav-link disabled text-light text-muted">Disabled</a>
                     </li> -->
-                    </ul>
-                    
+                </ul>
+
             </div>
-            
+
         </div>
     </nav>
-    
+
     <div>
         <br><br><br>
     </div>
     <h1 class="container text-center display-1"><strong>MERT OLCAMAN</strong></h1>
-    
+
     <div class="container text-dark">
-        
+
         <!-- Informations First Part of The Page -->
-        <div class="row"> 
+        <div class="row">
             <!-- Informations Left Column -->
             <div class="col-4">
                 <!-- IMAGE -->
                 <div class="row">
-                    <img id="my_image" src="https://raw.githubusercontent.com/htunknown/cv/main/white-Foto%C4%9Fraf.jpg" style="--color:#393e46;">
+                    <img id="my_image"
+                        src="https://media.licdn.com/dms/image/v2/D4E03AQF1--8YnKcxUw/profile-displayphoto-shrink_400_400/B4EZS87li9G0As-/0/1738336525723?e=1752105600&v=beta&t=ptdpOmMNjC3o90U8VofyT9ULk9nHSoWrMYgYt_FUbWo"
+                        style="--color:#393e46;">
                 </div>
-                
+
                 <!-- Contact -->
-                <div  class="row" id="contact">
-                    
+                <div class="row" id="contact">
+
 
                     <!-- Linkedin -->
                     <div class="col-2">
-                        <a target="_blank" href="https://www.linkedin.com/in/mert-olcaman/"  title="LinkedIn">
-                            <svg class="linkedin_svg" id="icon_linkedin" viewBox="0 0 512 512" >
-                                <path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z"/>
+                        <a target="_blank" href="https://www.linkedin.com/in/mert-olcaman/" title="LinkedIn">
+                            <svg class="linkedin_svg" id="icon_linkedin" viewBox="0 0 512 512">
+                                <path
+                                    d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" />
                             </svg><!--[if lt IE 9]><em>LinkedIn</em><![endif]-->
                         </a>
                     </div>
@@ -340,20 +359,21 @@
                     <!-- Mail -->
                     <div class="col-2">
                         <a target="_blank" href="mailto: mertolcaman@gmail.com">
-                            <svg  class="mail_svg"  xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
-                                <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6"/>
-                                <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15"/>
-                                <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2"/>
-                                <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92"/>
-                                <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2"/>
+                            <svg class="mail_svg" xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66">
+                                <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
+                                <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
+                                <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
+                                <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92" />
+                                <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
                             </svg>
-                            
+
                         </a>
                     </div>
 
                     <div class="col-1">
-                        <a  href="https://wa.me/447999871726">
-                            <img class="wp_icon" src="https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360" alt="">
+                        <a href="https://wa.me/447999871726">
+                            <img class="wp_icon" src="https://cdn-icons-png.flaticon.com/512/124/124034.png?w=360"
+                                alt="">
                         </a>
                     </div>
                 </div>
@@ -369,12 +389,14 @@
 
 
                     <!-- TABLE-IELTS -->
-                    <table class="table" id="ielts_table" >
+                    <table class="table" id="ielts_table">
                         <thead>
                             <div class="text-center">
-                                <a style="color: #000000; text-decoration: none; font-size: 15px;"target="_blank" href="https://raw.githubusercontent.com/htunknown/cv/main/IELTS%20Result.png"><strong>IELTS Academic (Date: 10/2022)</strong></a>
+                                <a style="color: #000000; text-decoration: none; font-size: 15px;" target="_blank"
+                                    href="https://raw.githubusercontent.com/htunknown/cv/main/IELTS%20Result.png"><strong>IELTS
+                                        Academic (Date: 10/2022)</strong></a>
                             </div>
-                            
+
                         </thead>
                         <!-- Table IELTS Content -->
                         <tbody>
@@ -383,9 +405,10 @@
                                 <td id="ielts_score">Listening</td>
                                 <td>
                                     <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">7.0</div>
+                                        <div class="progress-bar " role="progressbar" style="width: 77%"
+                                            aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">7.0</div>
                                     </div>
-                                </td>  
+                                </td>
                             </tr>
 
                             <tr>
@@ -393,7 +416,8 @@
                                 <td id="ielts_score">Reading</td>
                                 <td>
                                     <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">6.5</div>
+                                        <div class="progress-bar " role="progressbar" style="width: 72%"
+                                            aria-valuenow="72" aria-valuemin="0" aria-valuemax="100">6.5</div>
                                     </div>
                                 </td>
                             </tr>
@@ -402,7 +426,8 @@
                                 <td id="ielts_score">Writing</td>
                                 <td>
                                     <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">6.0</div>
+                                        <div class="progress-bar " role="progressbar" style="width: 66%"
+                                            aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">6.0</div>
                                     </div>
                                 </td>
                             </tr>
@@ -411,24 +436,29 @@
                                 <td id="ielts_score">Speaking</td>
                                 <td>
                                     <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> 6.0</div>
+                                        <div class="progress-bar " role="progressbar" style="width: 66%"
+                                            aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"> 6.0</div>
                                     </div>
                                 </td>
                             </tr>
-                            <tr><td></td></tr>
+                            <tr>
+                                <td></td>
+                            </tr>
                             <tr>
                                 <!-- Overall -->
                                 <td id="ielts_score"><strong>Overall</strong></td>
                                 <td>
                                     <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"> 6.5</div>
+                                        <div class="progress-bar " role="progressbar" style="width: 72%"
+                                            aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"> 6.5</div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
                                 <!-- RESULT -->
                                 <td>
-                                    <a style="color: #142d4c; text-decoration: none; font-size: 20px;"target="_blank" href="https://raw.githubusercontent.com/htunknown/cv/main/IELTS%20Result.png"><strong>RESULT</strong></a>
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 20px;" target="_blank"
+                                        href="https://raw.githubusercontent.com/htunknown/cv/main/IELTS%20Result.png"><strong>RESULT</strong></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -442,7 +472,10 @@
                 <!-- Personal Characteristics List -->
                 <div class="row">
                     <ul class="list-group">
-                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="personal_characteristics"><strong>Personal Characteristics</strong></h5>  </li>
+                        <li class="list-group-item text-left"
+                            style="padding-left: 0; background-color: #C0C0C0; border: 0;">
+                            <h5 id="personal_characteristics"><strong>Personal Characteristics</strong></h5>
+                        </li>
                         <div class="container">
                             <li class="list">Patient</li>
                             <li class="list">Determined</li>
@@ -450,8 +483,8 @@
                             <li class="list">Self-motivated</li>
                             <li class="list">Detail-oriented</li>
                         </div>
-                        
-                        
+
+
                     </ul>
                 </div>
                 <div class="container" style="height:1em;">
@@ -460,27 +493,33 @@
                 <!-- Publications -->
                 <div class="row">
                     <ul class="list-group">
-                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="project_euler"><strong>Publications</strong></h5>  </li>
+                        <li class="list-group-item text-left"
+                            style="padding-left: 0; background-color: #C0C0C0; border: 0;">
+                            <h5 id="project_euler"><strong>Publications</strong></h5>
+                        </li>
                         <div class="container">
                             <li class="list">Understanding Hypothesis Testing (paired sample t-test)
-                                <a style="text-decoration: none; color: #142d4c;" href="https://medium.com/@mertolcaman/understanding-hypothesis-testing-487496137f84">
-                                    <strong style="font-size: 15px;">(Link)</strong> 
+                                <a style="text-decoration: none; color: #142d4c;"
+                                    href="https://medium.com/@mertolcaman/understanding-hypothesis-testing-487496137f84">
+                                    <strong style="font-size: 15px;">(Link)</strong>
                                 </a>
                             </li>
 
 
                             <li class="list">Educational Instructions to Upload Data From Excel to SQL
-                                <a style="text-decoration: none; color: #142d4c;" href="https://medium.com/@mertolcaman/importing-data-from-excel-to-sql-b50b1ab2b9dd">
-                                    <strong style="font-size: 15px;">(Link)</strong> 
+                                <a style="text-decoration: none; color: #142d4c;"
+                                    href="https://medium.com/@mertolcaman/importing-data-from-excel-to-sql-b50b1ab2b9dd">
+                                    <strong style="font-size: 15px;">(Link)</strong>
                                 </a>
                             </li>
 
                             <li class="list">Explanation of Monty Hall Problem
-                                <a style="text-decoration: none; color: #142d4c;" href="https://medium.com/@mertolcaman/monty-hall-problem-8c8383929d26">
-                                    <strong style="font-size: 15px;">(Link)</strong> 
+                                <a style="text-decoration: none; color: #142d4c;"
+                                    href="https://medium.com/@mertolcaman/monty-hall-problem-8c8383929d26">
+                                    <strong style="font-size: 15px;">(Link)</strong>
                                 </a>
                             </li>
-                        </div> 
+                        </div>
                     </ul>
                 </div>
 
@@ -490,16 +529,21 @@
                 <!-- The Life Approach -->
                 <div class="row">
                     <ul class="list-group">
-                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="the_life_approach"><strong>The Life Approach</strong></h5>  </li>
+                        <li class="list-group-item text-left"
+                            style="padding-left: 0; background-color: #C0C0C0; border: 0;">
+                            <h5 id="the_life_approach"><strong>The Life Approach</strong></h5>
+                        </li>
                         <div class="container">
                             <li class="list">To continue to do things at the point where everyone gives up.</li>
                             <p></p>
-                            <li class="list">Dividing the success into 2 parts as first is our achievements that we have already reached and another is the thing that we have learned from our unsuccessful attempts.</li>
-                            
-                        
+                            <li class="list">Dividing the success into 2 parts as first is our achievements that we have
+                                already reached and another is the thing that we have learned from our unsuccessful
+                                attempts.</li>
+
+
                         </div>
-                        
-                        
+
+
                     </ul>
 
                 </div>
@@ -510,7 +554,7 @@
 
 
 
-                
+
 
 
 
@@ -520,10 +564,17 @@
                 <!-- Hobbies -->
                 <div class="row">
                     <ul class="list-group">
-                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h5 id="hobbies"><strong>Hobbies</strong></h5>  </li>
+                        <li class="list-group-item text-left"
+                            style="padding-left: 0; background-color: #C0C0C0; border: 0;">
+                            <h5 id="hobbies"><strong>Hobbies</strong></h5>
+                        </li>
                         <div class="container">
-                            <li class="list"><strong style="color: #142d4c;">Playing Instrument:</strong> Playing bass guitar mainly. Moreover, I played in different events with band mostly at high school and took part in music competitions called "Vodafone Freezone" 2 times, when I was at high school. <br> Additionally, I can play other guitar types as well as some rhythms on drum. </li>
-                        </div> 
+                            <li class="list"><strong style="color: #142d4c;">Playing Instrument:</strong> Playing bass
+                                guitar mainly. Moreover, I played in different events with band mostly at high school
+                                and took part in music competitions called "Vodafone Freezone" 2 times, when I was at
+                                high school. <br> Additionally, I can play other guitar types as well as some rhythms on
+                                drum. </li>
+                        </div>
                     </ul>
                 </div>
 
@@ -539,14 +590,14 @@
             <!-- <div class="col">
             </div> -->
             <!-- Line -->
-            <div  class=" vertical " style="width: 20px;">
+            <div class=" vertical " style="width: 20px;">
             </div>
 
             <!-- Informations Right Column-->
             <div class="col-7 ">
                 <div class="container" style="height:3em;">
                 </div>
-                
+
                 <!-- About me header -->
                 <div class="row">
                     <div>
@@ -558,28 +609,33 @@
                 <div class="row">
                     <div>
                         <p>
-                            
-                            <h5 class="about_me" style="font-weight: normal;">During BSc in Mechanical Engineering, I studied at different universities in thanks to the student exchange programmes (Farabi, and Erasmus respectively.)
-                                                                                <br>
 
-                                                                                <br> 
-                                                                                I have recently graduated from MSc in Data Science at the University of Sussex. I worked on my dissertation related to Social Media Data Analysis of Cryptocurrency Markets by using several LLM models for sentiment analysis, and LSTM for price forecasting.
-                                                                                <br>
+                        <h5 class="about_me" style="font-weight: normal;">
+                            I earned my BSc in Mechanical Engineering after studying at multiple institutions through
+                            exchange programs - including Yıldız Technical University (Farabi) and Silesian University
+                            of Technology in Poland (Erasmus). These experiences broadened my perspective both
+                            academically and culturally.
+                            <br><br>
+                            I recently completed my MSc in Data Science at the University of Sussex, where I focused my
+                            dissertation on analyzing social media sentiment in cryptocurrency markets. I combined large
+                            language models (LLMs) for sentiment analysis with LSTM models to forecast price trends,
+                            giving me hands-on experience with time series data and NLP.
+                            <br><br>
+                            I'm a highly motivated learner with a strong passion for building and experimenting with
+                            intelligent systems. I enjoy tackling complex problems, learning new tools, and developing
+                            innovative solutions - especially at the intersection of AI, data, and full-stack
+                            development.
+                            <br><br>
+                            Outside of technology, I enjoy playing guitar and have performed in several events and
+                            competitions during my school years. This creative outlet helps me maintain balance while
+                            continuing to grow in my technical journey.
+                        </h5>
 
-                                                                                <br>
-                                                                                Up to now, I think I can learn anything that I am interested in by myself. Moreover, I really love to improve my skills constantly and
-                                                                                like to deal with tasks on computer by using various tools. 
-                                                                                <br>
 
-                                                                                <br>
-                                                                                In my leisure time, I am keen on playing guitar. Also, I took part in some events and competitions, when I was at high school.
-                                                                                
-                                                                                
-                                                                                </h5>
-                          
                         </p>
 
-                        <h4><a style="text-decoration: none; color: #142d4c;" href="biography.html">More About Me</a></h4>
+                        <h4><a style="text-decoration: none; color: #142d4c;" href="biography.html">More About Me</a>
+                        </h4>
                     </div>
                 </div>
 
@@ -595,24 +651,24 @@
 
                 <!-- Table-Education -->
                 <div class="row ">
-                    
+
                     <table class="table table-hover container border-dark" style="width:50em;">
-                        
+
                         <thead>
                             <tr>
                                 <th></th>
                                 <th></th>
                             </tr>
                         </thead>
-                        
+
                         <tbody class="container text-center">
                             <!-- Sussex -->
                             <tr>
                                 <th style=text-align:left;>Master</th>
                                 <td>
                                     <p style="margin:0 ;">University of Sussex-Data Science</p>
-                                    <p style="margin:0 ;"> (Brighton-United Kingdom | 09/2023 - 09/2024)</p>
-                                    <p style="margin:0 ;"> <strong>GRADE: 69% [2:1 (Upper Second-Class Honours)]</strong>  </p>
+                                    <p style="margin:0 ;"> (Brighton-United Kingdom | 09/2023 - 10/2024)</p>
+                                    <p style="margin:0 ;"> <strong>GRADE: Upper Second - Class Honours</strong> </p>
                                 </td>
                             </tr>
                             <!-- Erasmus -->
@@ -622,7 +678,9 @@
                                     <p style="margin:0 ;">Silesian University of Technology-Mechanical Engineering</p>
                                     <p style="margin:0 ;">(Erasmus Student Exchange Programme)</p>
                                     <p style="margin:0 ;"> (Gliwice-POLAND | 09/2019 - 02/2020)</p>
-                                    <button><a style="text-decoration: none; ;" href="https://drive.google.com/drive/folders/1sSnDnJmErmDf5pvDcVdSjDD_Vnbc5G70?usp=sharing"> <strong style="color:#142d4c">Documents</strong> </a></button>
+                                    <button><a style="text-decoration: none; ;"
+                                            href="https://drive.google.com/drive/folders/1sSnDnJmErmDf5pvDcVdSjDD_Vnbc5G70?usp=sharing">
+                                            <strong style="color:#142d4c">Documents</strong> </a></button>
                                 </td>
                             </tr>
                             <!-- Farabi -->
@@ -632,18 +690,22 @@
                                     <p style="margin:0 ;"> Yıldız Technical University-Mechanical Engineering</p>
                                     <p style="margin:0 ;">(Farabi Student Exchange Programme)</p>
                                     <p style="margin:0 ;">(İstanbul | 09/2018 - 06/2019)</p>
-                                    <p style="margin:0 ;"> <strong> GPA: 3.27 out of 4</strong>  </p>
-                                    <button><a style="text-decoration: none; ;" href="https://drive.google.com/drive/folders/1dlEGHsZtp4adb5oiI97PGwwPHzZqi9qr?usp=sharing"> <strong style="color:#142d4c">Documents</strong> </a></button>
+                                    <p style="margin:0 ;"> <strong> GPA: 3.27 out of 4</strong> </p>
+                                    <button><a style="text-decoration: none; ;"
+                                            href="https://drive.google.com/drive/folders/1dlEGHsZtp4adb5oiI97PGwwPHzZqi9qr?usp=sharing">
+                                            <strong style="color:#142d4c">Documents</strong> </a></button>
                                 </td>
                             </tr>
                             <!-- Uludag -->
-                            <tr>    
+                            <tr>
                                 <th style=text-align:left>Bachelor</th>
                                 <td>
                                     <p style="margin:0 ;">Bursa Uludag University-Mechanical Engineering</p>
                                     <p style="margin:0 ;">(Bursa | 09/2015 - 01/2022)</p>
-                                    <p style="margin:0 ;"> <strong>GPA:3.36 out of 4</strong>   </p>
-                                    <button><a style="text-decoration: none; ;" href="https://drive.google.com/file/d/1gqsLMeM0RHCW60Ffk3cgN3Mk9Hm_96uA/view?usp=sharing"> <strong style="color:#142d4c">Documents</strong> </a></button>
+                                    <p style="margin:0 ;"> <strong>GPA:3.36 out of 4</strong> </p>
+                                    <button><a style="text-decoration: none; ;"
+                                            href="https://drive.google.com/file/d/1gqsLMeM0RHCW60Ffk3cgN3Mk9Hm_96uA/view?usp=sharing">
+                                            <strong style="color:#142d4c">Documents</strong> </a></button>
                                 </td>
                             </tr>
                             <!-- Highschool -->
@@ -660,14 +722,17 @@
                                 <th style=text-align:left>Academic Achievements</th>
                                 <td>
                                     <ul style="margin-bottom:0; margin-left: 0;" class="text-start">
-                                        <li>2017/2018 Spring Term; being in the first 10% <strong>(High Honor Student)</strong></li>
-                                        <li>2017/2018 Fall Term; being in the first 10% <strong>(Honor Student)</strong></li>
-                                        <li>2016/2017 Spring Term; being in the first 10% <strong>(Honor Student)</strong></li>
+                                        <li>2017/2018 Spring Term; being in the first 10% <strong>(High Honor
+                                                Student)</strong></li>
+                                        <li>2017/2018 Fall Term; being in the first 10% <strong>(Honor Student)</strong>
+                                        </li>
+                                        <li>2016/2017 Spring Term; being in the first 10% <strong>(Honor
+                                                Student)</strong></li>
                                     </ul>
                                 </td>
-                            </tr>    
+                            </tr>
                         </tbody>
-                        
+
                     </table>
                 </div>
 
@@ -676,589 +741,683 @@
 
                 <!-- EXPERIENCES -->
                 <div class="row">
-                    <h3 id="header_experience" ><strong>EXPERIENCE</strong></h3>
-                    <div  class="accordion accordion-flush" id="accordionFlushExample" >
-                        <div class="accordion-item" >
-                          <h2 class="accordion-header" id="flush-headingOne" >
-                            <button   class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                <p style="margin:0 ; font-size: larger;"> <strong>06/2021 - 01/2022</strong>  | Renkler Makine (MANISA) - Part Time Manufacturing Engineer</p>    
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">
-                                <ul class="list-group">
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Participated in 5S controls in different units and gave points to 3 random units at each control according to the list regularly.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Assisted with tagging tools and organizing arrangements.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Assisted with AutoCAD drawings of parts used in production and created sketches of specific production areas.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Took notes by observing specific production areas and operators to check for efficiency losses, noted action lists, and reported observations to the production manager daily.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Attended regular meeting with a production team to brainstorm potential improvements in the production area.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Prepared SMED forms and spaghetti diagrams, compared takt time and cycle time using bar charts, and learned about the skill matrix.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Explored the use of OEE in a real workplace and monitored the status of operators and machine stoppages.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Created various figures (bar, line, pie charts) based on operator, machine, and shift data by importing relevant data from Power BI to Excel.</li>
-                                    <li style="list-style:none;" class="list">&#160; <strong>-</strong> Did presentation about the possible future improvements at the factory to the management with a team from both my plant and another plant of the same factory.</li>
-                                </ul>
+                    <h3 id="header_experience"><strong>EXPERIENCE</strong></h3>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+
+                        <!-- Agricultural IoT Startup -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingA">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseA" aria-expanded="false"
+                                    aria-controls="flush-collapseA">
+                                    <p style="margin:0 ; font-size: larger;"><strong>02/2025 – Present</strong> |
+                                        Agricultural IoT Startup (remote) - Data
+                                        Scientist</p>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseA" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingA" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Built a
+                                            cloud-native system to ingest, process, and visualize real-time sensor data
+                                            using AWS IoT Core, EC2, and FastAPI.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Managed AWS
+                                            services including IAM, Lambda, SNS, RDS (PostgreSQL), and DynamoDB for
+                                            secure and scalable infrastructure.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Developed
+                                            CI/CD pipelines using GitHub Actions to deploy React (frontend) and FastAPI
+                                            (backend) applications via Docker on EC2.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Designed a
+                                            modular FastAPI backend with scalable API endpoints; deployed initially on
+                                            Render, later migrated to EC2 for full-stack control.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Created an
+                                            interactive React.js dashboard with real-time sensor visualizations and
+                                            filtering options for historical data analysis.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Implemented
+                                            alert systems using AWS Lambda and SNS to notify stakeholders of anomalies
+                                            or system failures.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Progressing
+                                            toward the implementation of machine learning models to extract actionable
+                                            insights from sensor data and support optimization of irrigation and farming
+                                            practices.</li>
+                                    </ul>
+                                </div>
                             </div>
-                          </div>
                         </div>
-                        <div class="accordion-item" >
-                          <h2 class="accordion-header" id="flush-headingTwo">
-                            <button  class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                <p style="margin:0 ; font-size: larger;"><strong>08/2018 - 09/2018</strong>  | Accell Bicycle (MANISA) - Summer Internship</p>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Completing the internship in the unit of <strong>occupational health and safety</strong>. <br> During internship; <br>
-                                <li style="list-style:none;" class="list">&#160; <strong>-</strong> Had the opportunity to observe almost all units in the factory. </li>
-                                <li style="list-style:none;" class="list">&#160; <strong>-</strong> Worked mainly in the welding area to identify hazardous situations by taking notes.</li>
+
+
+                        <!-- Renkler Makine – Part-Time Role -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <p style="margin:0 ; font-size: larger;">
+                                        <strong>06/2021 - 01/2022</strong> | Renkler Makine (MANISA) - Part-Time
+                                        Manufacturing Engineer
+                                    </p>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul class="list-group">
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Participated
+                                            in 5S controls across multiple factory units and contributed to workplace
+                                            organization and standardization efforts.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Assisted
+                                            with tagging tools and improving equipment arrangements to enhance
+                                            accessibility and safety.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Observed
+                                            operator workflows and production line behavior to identify inefficiencies,
+                                            reporting findings to the production manager regularly.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Attended
+                                            team meetings and brainstorming sessions to propose and evaluate improvement
+                                            opportunities in production efficiency.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Prepared
+                                            SMED (Single-Minute Exchange of Dies) forms and spaghetti diagrams to reduce
+                                            setup times and analyze motion paths.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Monitored
+                                            real-time operations and evaluated Overall Equipment Effectiveness (OEE) to
+                                            assess machine utilization and productivity.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Imported
+                                            data from Power BI to Excel and created bar, line, and pie charts segmented
+                                            by operator, machine, and shift for performance evaluation.</li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong> Performed
+                                            data analysis on production metrics to support informed decision-making and
+                                            continuous improvement initiatives.</li>
+                                    </ul>
+                                </div>
                             </div>
-                          </div>
                         </div>
+
+
                     </div>
-
-                <div class="container" style="height:3em;">
                 </div>
 
-                <!-- TABLE-Computer Skills -->
-                <table class="table table-hover" id="computer_skills_table" > 
-                        <thead>
-                            <div class="">
-                                <h3 id="header_computer_skills" ><strong>COMPUTER SKILLS</strong></h3>
-                            </div>
-                            
-                        </thead>
-                        <!-- Table Computer Skills Content -->
-                        <tbody>
-                            <!-- Python -->
-                            <tr>
-                                <td id="computer_skills"> <strong>Python</strong> </td>
-                                <td >
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>  
-                            </tr>
-                            <!-- C++ -->
-                            <tr>
-                                <td id="computer_skills">  <strong>C++</strong>  </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- MATLAB -->
-                            <tr>
-                                <td id="computer_skills">  <strong>MATLAB</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Excel -->
-                            <tr>
-                                <td id="computer_skills">  <strong>Excel</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- SQL -->
-                            <tr>
-                                <td id="computer_skills"> <strong>SQL</strong>  </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Arduino -->
-                            <tr>
-                                <td id="computer_skills">  <strong>Arduino</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- HTML -->
-                            <tr>
-                                <td id="computer_skills">  <strong>HTML & CSS</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Ansys Fluent -->
-                            <tr>
-                                <td id="computer_skills">  <strong>Ansys Fluent</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- CATIA -->
-                            <tr>
-                                <td id="computer_skills"> <strong>CATIA</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- SolidWorks -->
-                            <tr>
-                                <td id="computer_skills"> <strong>SolidWorks</strong>  </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- PLC -->
-                            <tr>
-                                <td id="computer_skills">  <strong>PLC</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- AutoCAD -->
-                            <tr>
-                                <td id="computer_skills">  <strong>AutoCAD</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- Siemens NX -->
-                            <tr>
-                                <td id="computer_skills">  <strong>Siemens NX</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <!-- 3D printer -->
-                            <tr>
-                                <td id="computer_skills">  <strong>3D Printer</strong> </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar " role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"> </div>
-                                    </div>
-                                </td>
-                            </tr>
+            </div>
 
-                        </tbody>
+            <!-- Informations Second Part of The Page -->
+            <div class="row">
+                <div>
 
-                </table>
 
-                <div class="container" style="height:3em;">
-                </div>
-
-            </div>                
-        </div>
-        
-        <!-- Informations Second Part of The Page -->
-        <div class="row">
-            <div>
-
-                
-                <!-- PROJECTS -->
-                <div class="row" id="projects">
-                    <ul class="list-group">
-                        <li class="list-group-item text-left" style="padding-left: 0; background-color: #C0C0C0; border: 0;" >  <h3 id="header_projects" ><strong>PROJECTS</strong></h3>  </li>
-                        <div class="container">
-                            <li class="list"><strong style="color: #142d4c; text-decoration: none; font-size: 20px;">Dissertation:</strong> Social Media Data Analysis of Cryptocurrency Markets: Analyzed Reddit data to explore the impact of social media sentiment on cryptocurrency prices. Used combined Large Language Models (LLMs) for sentiment analysis and Long Short-Term Memory (LSTM) models for price forecasting, focusing on a one-month period.
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/dissertation"> <strong>(Project Documents)</strong></a></li>
-                            <p></p>
-                            
-                           
-                            
-
-                            <li class="list"> Predicting 3 next year’s export value of crop products by using Neural Networks on FAOSTAT data
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/crop_export_prediction">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
-                            
-                            <li class="list"> Image processing by using methods on Matlab such as removing noise, rotating and projection, and detecting colours and shapes
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/image_processing">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
-                            
-                            <li class="list"> NLP Propaganda detection and classification by using 2 approaches, BERT and bag-of-words
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/NLP_propaganda_detection">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
-                            
-                            <li class="list"> Activity prediction to the dataset of physical activity dataset
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/activity_prediction">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
-                            
-                            <li class="list"> Calculating Time Complexities of Similarity Algorithms
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/time_complexity_calculation">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
+                    <!-- PROJECTS -->
+                    <div class="row" id="projects">
+                        <ul class="list-group">
+                            <li class="list-group-item text-left"
+                                style="padding-left: 0; background-color: #C0C0C0; border: 0;">
+                                <h3 id="header_projects"><strong>PROJECTS</strong></h3>
+                            </li>
+                            <div class="container">
 
 
 
-                            <li class="list">NLP Movie reviews sentiment analysis by using both Wordlist Classifier and Naive Bayes Classifier
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://www.kaggle.com/code/mertolaman/nlp-movie-review-sentiment-prediction-model">
-                                    <strong> (Link) </strong> 
-                                </a> </li>
-                            <p></p>
+                                <li class="list">
+
+                                    Developed a full-stack AI chatbot that enables conversation context retention, user
+                                    authentication, and dynamic chat history retrieval using React
+                                    (Firebase) and FastAPI (Render) with
+                                    Firestore.
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://chat-with-mert.web.app/">
+                                        <strong>(Chat Now)</strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list">
+
+                                    Conducted SQL-based revenue and conversion analysis, categorized acquisition
+                                    channels, and calculated LTV by country. Implemented machine learning models
+                                    including Random Forest, XGBoost, and
+                                    LSTM to predict user churn probability and potential customer
+                                    lifetime value.
+                                </li>
+                                <p></p>
 
 
-                            <li class="list">Creating a dashboard on Power BI
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/1etXB6zG5Wedq7ulTJTr2eS2ZRPN1zSGF?usp=sharing">
-                                    <strong> (Link) </strong>
-                                 </a> </li>
-                            <p></p>
-                            
+                                <li class="list"> <strong
+                                        style="color: #142d4c; text-decoration: none; font-size: 20px;">Dissertation:</strong>
+                                    Social Media Data Analysis of Cryptocurrency Markets: Analyzed Reddit
+                                    data to
+                                    explore the impact of social media sentiment on cryptocurrency prices. Used combined
+                                    Large Language Models (LLMs) for sentiment analysis and Long Short-Term Memory
+                                    (LSTM) models for price forecasting, focusing on a one-month period.
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/dissertation">
+                                        <strong> (Project Documents) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
 
-                            <li class="list">Practicing on SQL
-                                <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/SQL-Practice">
-                                    <strong> (Basic Queries, </strong> </a> <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/1Wg3LrAMHgNgusyXKcNCF1pyCNkRgLQGM?usp=sharing"> 
+
+
+
+
+
+
+
+
+                                <li class="list"> Predicting 3 next year’s export value of crop products by using Neural
+                                    Networks on FAOSTAT data
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/crop_export_prediction">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list"> Image processing by using methods on Matlab such as removing noise,
+                                    rotating and projection, and detecting colours and shapes
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/image_processing">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list"> NLP Propaganda detection and classification by using 2 approaches,
+                                    BERT and bag-of-words
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/NLP_propaganda_detection">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list"> Activity prediction to the dataset of physical activity dataset
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/activity_prediction">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list"> Calculating Time Complexities of Similarity Algorithms
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/time_complexity_calculation">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+
+
+                                <li class="list">NLP Movie reviews sentiment analysis by using both Wordlist Classifier
+                                    and Naive Bayes Classifier
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://www.kaggle.com/code/mertolaman/nlp-movie-review-sentiment-prediction-model">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+
+                                <li class="list">Creating a dashboard on Power BI
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/1etXB6zG5Wedq7ulTJTr2eS2ZRPN1zSGF?usp=sharing">
+                                        <strong> (Link) </strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+
+                                <li class="list">Practicing on SQL
+                                    <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/SQL-Practice">
+                                        <strong> (Basic Queries, </strong> </a> <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/1Wg3LrAMHgNgusyXKcNCF1pyCNkRgLQGM?usp=sharing">
                                         <strong>Projects)</strong>
+                                    </a>
+                                </li>
+                                <p></p>
+
+                                <li class="list">Visualization of a dataset on kaggle <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://www.kaggle.com/code/mertolaman/animal-s"><strong> (Link) </strong>
                                     </a> </li>
-                            <p></p>
+                                <p></p>
+                                <li class="list">Website designing by Bootstrap <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/my/tree/main"><strong> (Source Code ,
+                                        </strong> </a> <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href=" http://a-9v15.onrender.com/"> <strong>Website)</strong> </a></li>
+                                <p></p>
+                                <li class="list">Balancing of a ping-pong ball by PID controller on Arduino<a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://github.com/htunknown/ping-pong-pid"><strong> (Source Code ,
+                                        </strong> </a> <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://www.youtube.com/shorts/Tn5dPqjGLQA"> <strong>Video)</strong> </a>
+                                </li>
+                                <p></p>
+                                <li class="list"><strong
+                                        style="color: #142d4c; text-decoration: none; font-size: 20px;">Final
+                                        Project:</strong> Working on the controlling of the roll, pitch and yaw axes of
+                                    the Quadcopter, which was designed and printed by me through SolidWorks and 3D
+                                    printer respectively, in real time by using Arduino and Matlab Simulink.<a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://www.youtube.com/watch?v=qrYwcl2z4zA&ab_channel=MERTOLCAMAN">
+                                        <strong>(Presentation Video ,</strong></a> <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/1ubNJxfprhh-IOYGDIDfkfJXHYCK9tLBI?usp=sharing">
+                                        <strong>Project Documents)</strong></a></li>
+                                <p></p>
+                                <li class="list">Modelling a mechanical press model and creating graphics related to
+                                    kinetic analysis after determining the links and supports by Siemens NX with other
+                                    group members. <a style="color: #142d4c; text-decoration: none; font-size: 15px;"
+                                        target="_blank"
+                                        href="https://drive.google.com/drive/folders/1ZVJmcEB0Ngas27be1SQebQlpzDohGNNg?usp=sharing">
+                                        <strong> (Project Document) </strong></a></li>
+                                <p></p>
+                                <li class="list"> Gearbox design and modelling on Autodesk Inventor <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/1nCQVcdlUsGRNuAacKZVfTecZhJnZ_3JV?usp=sharing">
+                                        <strong>(Project Documents)</strong></a></li>
+                                <p></p>
+                                <li class="list"> Designing of pressure vessel related to machinery design lecture at
+                                    Silesian University of Technology <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/10w6uFij-eUr2ao1w93ObxIplQ8aS8MyV?usp=sharing">
+                                        <strong>(Project Documents)</strong></a></li>
+                                <p></p>
+                                <li class="list">Coding of PLC for automated car parking system on Panasonic software
+                                    with project members from Yıldız Technical University. <a
+                                        style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank"
+                                        href="https://drive.google.com/drive/folders/18jh6IuZg-EdcsDuGrs0XmsPySUozLuXM?usp=sharing">
+                                        <strong> (Project Documents) </strong> </a> </li>
+                                <p></p>
+                                <li class="list">Modelling of “Mass-Spring-Damper” in Simulink, Simscape, Simmechanic on
+                                    Matlab and implementation PID controlling of velocity and position.</li>
+                                <p></p>
+                                <li class="list">2 projects related to "Computer Aided Heat Technique Calculations" by
+                                    Ansys fluent:
+                                    <ul class="list-group">
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong>Examining of
+                                            temperature changes in the wall of barrage by modelling 2D <a
+                                                style="color: #142d4c; text-decoration: none; font-size: 15px;"
+                                                target="_blank"
+                                                href="https://drive.google.com/file/d/1qcnTX_xGA3hK5DFmNNWtU7w-pjQVhQOk/view?usp=sharing">
+                                                <strong>(Project Document)</strong></a></li>
+                                        <li style="list-style:none;" class="list">&#160; <strong>-</strong>Examining of
+                                            flow through "2-D Curved Backward-Facing Step" <a
+                                                style="color: #142d4c; text-decoration: none; font-size: 15px;"
+                                                target="_blank"
+                                                href="https://drive.google.com/file/d/13Sh2qBHZ53lA1QYEKmGLT8h4hKpsyOvg/view?usp=sharing">
+                                                <strong>(Project Document)</strong></a></li>
+                                    </ul>
+                                </li>
+                                <p></p>
+                                <li class="list">Working on Arduino and implementation of different types of projects
+                                    during pandemic:
+                                    <ul class="list-group ">
+                                        <li style="list-style:none ;" class="list"> &#160; <strong>-</strong>Balancing
+                                            of ping pong ball by PID controller <a
+                                                style="color: #142d4c; text-decoration: none; font-size: 15px;"
+                                                href="https://youtube.com/shorts/Tn5dPqjGLQA?feature=share"><strong>(Video
+                                                    ,</strong></a> <a
+                                                style="color: #142d4c; text-decoration: none; font-size: 15px;"
+                                                href="https://github.com/htunknown/pin-pon-pid"><strong>Source
+                                                    Code)</strong></a></li>
+                                        <li style="list-style:none ;" class="list"> &#160; <strong>-</strong>The
+                                            controlling of the electrical vehicle from mobile application by HC06
+                                            Bluetooth module</li>
+                                        <li style="list-style:none ;" class="list"> &#160; <strong>-</strong>Parking
+                                            sensor by HC-SR04 and printing the distance to LCD screen</li>
+                                        <li style="list-style:none ;" class="list"> &#160; <strong>-</strong>Remote
+                                            position changing of the servo motor by using NRFL2401 and joystick</li>
+                                        <li style="list-style:none ;" class="list"> &#160; <strong>-</strong>Line
+                                            follower electrical vehicle by using infrared sensor</li>
 
-                            <li class="list">Visualization of a dataset on kaggle  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://www.kaggle.com/code/mertolaman/animal-s"><strong> (Link) </strong> </a> </li>
-                            <p></p>
-                            <li class="list">Website designing by Bootstrap  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/my/tree/main"><strong> (Source Code , </strong> </a>  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href=" http://a-9v15.onrender.com/"> <strong>Website)</strong> </a></li>
-                            <p></p>
-                            <li class="list">Balancing of a ping-pong ball by PID controller on Arduino<a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://github.com/htunknown/ping-pong-pid"><strong> (Source Code , </strong> </a>  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://www.youtube.com/shorts/Tn5dPqjGLQA"> <strong>Video)</strong> </a></li>
-                            <p></p>
-                            <li class="list"><strong style="color: #142d4c; text-decoration: none; font-size: 20px;">Final Project:</strong> Working on the controlling of the roll, pitch and yaw axes of the Quadcopter, which was designed and printed by me through SolidWorks and 3D printer respectively, in real time by using Arduino and Matlab Simulink.<a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://www.youtube.com/watch?v=qrYwcl2z4zA&ab_channel=MERTOLCAMAN"> <strong>(Presentation Video ,</strong></a> <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/1ubNJxfprhh-IOYGDIDfkfJXHYCK9tLBI?usp=sharing"> <strong>Project Documents)</strong></a></li>
-                            <p></p>
-                            <li class="list">Modelling a mechanical press model and creating graphics related to kinetic analysis after determining the links and supports by Siemens NX with other group members. <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/1ZVJmcEB0Ngas27be1SQebQlpzDohGNNg?usp=sharing"> <strong> (Project Document) </strong></a></li>
-                            <p></p>
-                            <li class="list"> Gearbox design and modelling on Autodesk Inventor  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/1nCQVcdlUsGRNuAacKZVfTecZhJnZ_3JV?usp=sharing"> <strong>(Project Documents)</strong></a></li>
-                            <p></p>
-                            <li class="list"> Designing of pressure vessel related to machinery design lecture at Silesian University of Technology <a style="color: #142d4c; text-decoration: none; font-size: 15px;" target="_blank" href="https://drive.google.com/drive/folders/10w6uFij-eUr2ao1w93ObxIplQ8aS8MyV?usp=sharing"> <strong>(Project Documents)</strong></a></li>
-                            <p></p>
-                            <li class="list">Coding of PLC for automated car parking system on Panasonic software with project members from Yıldız Technical University.  <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/drive/folders/18jh6IuZg-EdcsDuGrs0XmsPySUozLuXM?usp=sharing"> <strong> (Project Documents) </strong>  </a> </li>
-                            <p></p>
-                            <li class="list">Modelling of “Mass-Spring-Damper” in Simulink, Simscape, Simmechanic on Matlab and implementation PID controlling of velocity and position.</li>
-                            <p></p>
-                            <li class="list">2 projects related to "Computer Aided Heat Technique Calculations" by Ansys fluent:
-                                <ul class="list-group">
-                                    <li style="list-style:none;" class="list">&#160;  <strong>-</strong>Examining of temperature changes in the wall of barrage by modelling 2D <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/file/d/1qcnTX_xGA3hK5DFmNNWtU7w-pjQVhQOk/view?usp=sharing"> <strong>(Project Document)</strong></a></li>
-                                    <li style="list-style:none;" class="list">&#160;  <strong>-</strong>Examining of flow through "2-D Curved Backward-Facing Step" <a style="color: #142d4c; text-decoration: none; font-size: 15px;"target="_blank" href="https://drive.google.com/file/d/13Sh2qBHZ53lA1QYEKmGLT8h4hKpsyOvg/view?usp=sharing"> <strong>(Project Document)</strong></a></li>
-                                </ul>
-                            </li>
-                            <p></p>
-                            <li class="list">Working on Arduino and implementation of different types of projects during pandemic:
-                                <ul class="list-group ">
-                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Balancing of ping pong ball by PID controller <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://youtube.com/shorts/Tn5dPqjGLQA?feature=share"><strong >(Video ,</strong></a> <a style="color: #142d4c; text-decoration: none; font-size: 15px;" href="https://github.com/htunknown/pin-pon-pid"><strong>Source Code)</strong></a></li>
-                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>The controlling of the electrical vehicle from mobile application by HC06 Bluetooth module</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Parking sensor by HC-SR04 and printing the distance to LCD screen</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Remote position changing of the servo motor by using NRFL2401 and joystick</li>
-                                     <li style="list-style:none ;" class="list"> &#160;  <strong>-</strong>Line follower electrical vehicle by using infrared sensor</li>
-                                    
-                                </ul>
-                            </li>
-                            <p></p>
-                            <li class="list">Designing different types of 3D models by Solidworks and I have gotten 3D printed models via Ender 3v2.</li>
-                        </div>
-                    </ul>
-                </div>
+                                    </ul>
+                                </li>
+                                <p></p>
+                                <li class="list">Designing different types of 3D models by Solidworks and I have gotten
+                                    3D printed models via Ender 3v2.</li>
+                            </div>
+                        </ul>
+                    </div>
 
-                <div class="container" style="height:3em;">
-                </div>
+                    <div class="container" style="height:3em;">
+                    </div>
 
 
 
 
 
-                
-                <!-- EDUCATIONS AND CERTIFICATES -->
-                <div class="">
-                    <h3 id="header_educations_and_certificates"><strong>EDUCATIONS AND CERTIFICATES</strong></h3>
-                </div>
 
-                <!-- CARDS-CERTIFICATES -->
-                <div class="container">
-                    <div class="row">
-                        <!-- 24.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/SQL%20For%20Data%20Science%20Capstone%20Projects.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>UC DAVIS</strong></h5>
-                                    <p class="card-text">SQL For Data Science Capstone Projects</p>
-                                    <p class="card-text">5/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 23.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Aygaz-AI-Literacy-Bootcamp-Aygaz-AI-Literacy-Bootcamp-Global-AI-Hub.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Global AI Hub</strong></h5>
-                                    <p class="card-text">AI Literacy Bootcamp</p>
-                                    <p class="card-text">3/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 22.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/SQL%20For%20Everyone-UC%20DAVIS.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> UC DAVIS</strong></h5>
-                                    <p class="card-text">SQL For Data Science</p>
-                                    <p class="card-text">2/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 21.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Yapay-Zekaya-Ilk-Adim-Yapay-Zekaya-Ilk-Adim-Global-AI-Hub.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Global AI Hub</strong></h5>
-                                    <p class="card-text">First Step to AI</p>
-                                    <p class="card-text">2/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 20.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Communication%20Skills.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Elginkan Foundation</strong></h5>
-                                    <p class="card-text">Communication Skills</p>
-                                    <p class="card-text">1/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 19.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Problem%20Solving%20Techniques.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Elginkan</strong></h5>
-                                    <p class="card-text">Problem Solving Techniques</p>
-                                    <p class="card-text">1/2023</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 18.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/AI%20For%20Everyone.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Deep Learning AI</strong></h5>
-                                    <p class="card-text">AI For Everyone</p>
-                                    <p class="card-text">12/2022</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 17.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/kaggle.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Kaggle</strong></h5>
-                                    <p class="card-text">Data Visualization</p>
-                                    <p class="card-text">11/2022</p>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- 16.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Global%20AI%20Hub-%20Data%20Visualization.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
-                                    <p class="card-text">Data Visualization</p>
-                                    <p class="card-text">3/2022</p>
+                    <!-- EDUCATIONS AND CERTIFICATES -->
+                    <div class="">
+                        <h3 id="header_educations_and_certificates"><strong>EDUCATIONS AND CERTIFICATES</strong></h3>
+                    </div>
+
+                    <!-- CARDS-CERTIFICATES -->
+                    <div class="container">
+                        <div class="row">
+                            <!-- 24.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/SQL%20For%20Data%20Science%20Capstone%20Projects.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>UC DAVIS</strong></h5>
+                                        <p class="card-text">SQL For Data Science Capstone Projects</p>
+                                        <p class="card-text">5/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 15.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Hands-on-Data-Visualization-with-Python-Hands-on-Data-Visualization-with-Python-Global-AI-Hub.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
-                                    <p class="card-text">Hands-on Data Visualization with Python</p>
-                                    <p class="card-text">1/2022</p>
+                            <!-- 23.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Aygaz-AI-Literacy-Bootcamp-Aygaz-AI-Literacy-Bootcamp-Global-AI-Hub.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Global AI Hub</strong></h5>
+                                        <p class="card-text">AI Literacy Bootcamp</p>
+                                        <p class="card-text">3/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 14.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Veri-Analizi-Data-Analysis-Global-AI-Hub.jpeg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Global AI Hub </strong></h5>
-                                    <p class="card-text">Data Analysis</p>
-                                    <p class="card-text">2/2022</p>
+                            <!-- 22.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/SQL%20For%20Everyone-UC%20DAVIS.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> UC DAVIS</strong></h5>
+                                        <p class="card-text">SQL For Data Science</p>
+                                        <p class="card-text">2/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 13.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image"  src="https://raw.githubusercontent.com/htunknown/cv/main/Data%20Literacy.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
-                                    <p class="card-text">Data Literacy</p>
-                                    <p class="card-text">12/2021</p>
+                            <!-- 21.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Yapay-Zekaya-Ilk-Adim-Yapay-Zekaya-Ilk-Adim-Global-AI-Hub.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Global AI Hub</strong></h5>
+                                        <p class="card-text">First Step to AI</p>
+                                        <p class="card-text">2/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 12.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Data%20Science%20and%20Introduction%20to%20Artificial%20Intelligence.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
-                                    <p class="card-text">Data Science and Introduction to AI</p>
-                                    <p class="card-text">12/2021</p>
+                            <!-- 20.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Communication%20Skills.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Elginkan Foundation</strong></h5>
+                                        <p class="card-text">Communication Skills</p>
+                                        <p class="card-text">1/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 11.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Statistics%20for%20Data%20Science.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
-                                    <p class="card-text">Statistics for Data Science</p>
-                                    <p class="card-text">11/2022</p>
+                            <!-- 19.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Problem%20Solving%20Techniques.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Elginkan</strong></h5>
+                                        <p class="card-text">Problem Solving Techniques</p>
+                                        <p class="card-text">1/2023</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 10.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/tei.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>TEI Akademi </strong></h5>
-                                    <p class="card-text">Aviation Engines Schools</p>
-                                    <p class="card-text">6/2021</p>
+                            <!-- 18.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/AI%20For%20Everyone.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Deep Learning AI</strong></h5>
+                                        <p class="card-text">AI For Everyone</p>
+                                        <p class="card-text">12/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 9.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Python.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
-                                    <p class="card-text">Python</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_Python.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 17.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/kaggle.jpeg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Kaggle</strong></h5>
+                                        <p class="card-text">Data Visualization</p>
+                                        <p class="card-text">11/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 8.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/SQL.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
-                                    <p class="card-text">SQL</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_SQL.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 16.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Global%20AI%20Hub-%20Data%20Visualization.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                        <p class="card-text">Data Visualization</p>
+                                        <p class="card-text">3/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 7.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Advanced%20Excel.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation </strong></h5>
-                                    <p class="card-text">Advanced Excel</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_Advanced%20Excel.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 15.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Hands-on-Data-Visualization-with-Python-Hands-on-Data-Visualization-with-Python-Global-AI-Hub.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                        <p class="card-text">Hands-on Data Visualization with Python</p>
+                                        <p class="card-text">1/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 6.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/Bootstrap%20ile%20(Responsive)%20Duyarl%C4%B1%20Web%20Tasar%C4%B1m%C4%B1.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
-                                    <p class="card-text">Web Design by Bootstrap</p>
-                                    <p class="card-text">11/2022</p>
+                            <!-- 14.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Mert-OLCAMAN-Veri-Analizi-Data-Analysis-Global-AI-Hub.jpeg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Global AI Hub </strong></h5>
+                                        <p class="card-text">Data Analysis</p>
+                                        <p class="card-text">2/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 5.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/AutoCAD.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
-                                    <p class="card-text">AutoCAD</p>
-                                    <p class="card-text">2/2021</p>
+                            <!-- 13.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Data%20Literacy.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                        <p class="card-text">Data Literacy</p>
+                                        <p class="card-text">12/2021</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 4.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/SolidWorks.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
-                                    <p class="card-text">SolidWorks</p>
-                                    <p class="card-text">2/2021</p>
+                            <!-- 12.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Data%20Science%20and%20Introduction%20to%20Artificial%20Intelligence.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                        <p class="card-text">Data Science and Introduction to AI</p>
+                                        <p class="card-text">12/2021</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 3.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/higher%20honour.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
-                                    <p class="card-text">High Honor Certificate</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_y%C3%BCksek%20onur.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 11.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Statistics%20for%20Data%20Science.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Turkcell Akademi </strong></h5>
+                                        <p class="card-text">Statistics for Data Science</p>
+                                        <p class="card-text">11/2022</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 2.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/honour-2.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
-                                    <p class="card-text">Honor Certificate</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_honour%203.40.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 10.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/tei.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>TEI Akademi </strong></h5>
+                                        <p class="card-text">Aviation Engines Schools</p>
+                                        <p class="card-text">6/2021</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- 1.certificate -->
-                        <div class="col">
-                            <div class="card" id="card_image" >
-                                <img id="inner_card_image" src="https://raw.githubusercontent.com/htunknown/cv/main/honour.jpg" alt="">
-                                <div class="card-body text-center text-light" style="background-color: #142d4c ;">
-                                    <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
-                                    <p class="card-text">Honor Certificate</p>
-                                    <button><a style="text-decoration: none; ;" href="https://raw.githubusercontent.com/htunknown/cv/main/translation_honour3.02.jpeg"> <strong style="color:#142d4c">Translation</strong> </a></button>
+                            <!-- 9.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Python.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                        <p class="card-text">Python</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_Python.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 8.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/SQL.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                        <p class="card-text">SQL</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_SQL.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 7.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Advanced%20Excel.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation </strong></h5>
+                                        <p class="card-text">Advanced Excel</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_Advanced%20Excel.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 6.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/Bootstrap%20ile%20(Responsive)%20Duyarl%C4%B1%20Web%20Tasar%C4%B1m%C4%B1.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                        <p class="card-text">Web Design by Bootstrap</p>
+                                        <p class="card-text">11/2022</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 5.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/AutoCAD.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                        <p class="card-text">AutoCAD</p>
+                                        <p class="card-text">2/2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/SolidWorks.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong>Elginkan Foundation</strong></h5>
+                                        <p class="card-text">SolidWorks</p>
+                                        <p class="card-text">2/2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/higher%20honour.jpg"
+                                        alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                        <p class="card-text">High Honor Certificate</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_y%C3%BCksek%20onur.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/honour-2.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                        <p class="card-text">Honor Certificate</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_honour%203.40.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 1.certificate -->
+                            <div class="col">
+                                <div class="card" id="card_image">
+                                    <img id="inner_card_image"
+                                        src="https://raw.githubusercontent.com/htunknown/cv/main/honour.jpg" alt="">
+                                    <div class="card-body text-center text-light" style="background-color: #142d4c ;">
+                                        <h5 class="card-title"><strong> Bursa Uludag University </strong></h5>
+                                        <p class="card-text">Honor Certificate</p>
+                                        <button><a style="text-decoration: none; ;"
+                                                href="https://raw.githubusercontent.com/htunknown/cv/main/translation_honour3.02.jpeg">
+                                                <strong style="color:#142d4c">Translation</strong> </a></button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-             </div>
-        </div>
-    </div>  
+                </div>
+            </div>
 </body>
-</html> 
+
+</html>
